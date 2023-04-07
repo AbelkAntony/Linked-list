@@ -30,18 +30,33 @@ void display()
 	node = Head;
 	do
 	{
-		cout<<"\nData ";
 		cout<<node->data<<" ";
 		node = node->next;
 	}while(node != NULL);
 }
 int main() 
 {
-	insertData(2);
-	insertData(5);
-	insertData(8);
-	insertData(9);
-	cout<<"The linked list is : ";
-	display();
+	int option;
+	int data;
+	while(option!=3)
+	{
+		cout<<"\nOptions";
+		cout<<"\n1. Add elements to Linked list ";
+		cout<<"\n2. Display Linked list";
+		cout<<"\n3. Exit";
+		cout<<"\nEnter your choice : ";
+		cin>>option;
+		if(option==1)
+		{
+			cout<<"\nEnter element : ";
+			cin>>data;
+			insertData(data);
+		}
+		else if(option==2)
+		{
+			cout<<"The linked list is : ";
+			display();
+		}
+	}
 	return(0);
 }
