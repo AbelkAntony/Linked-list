@@ -31,7 +31,7 @@ void InsertData()
 }
 
 //Function to Display Linked List
-void Display()
+void DisplayList()
 {
 	cout<<"The linked list is : ";
 	Node *node;
@@ -44,7 +44,7 @@ void Display()
 }
 
 //Function to Search Item
-void Search()
+void SearchItem()
 {
 	
 	Node *node = Head;
@@ -70,6 +70,13 @@ void Search()
 	}
 }
 
+//Function to Delete item
+void DeleteItem()
+{
+	int item;
+	cout<<"\nEnter Item to delete";
+	cin>>item;
+}
 
 int main() 
 {
@@ -80,6 +87,7 @@ int main()
 		cout<<"\n1. Add elements to Linked list ";
 		cout<<"\n2. Display Linked list";
 		cout<<"\n3. Search item";
+		cout<<"\n4. Delete item";
 		cout<<"\n0. Exit";
 		cout<<"\nEnter your choice : ";
 		cin>>option;
@@ -89,12 +97,13 @@ int main()
 			InsertData();
 			break;
 			case 2:
-			Display();
+			DisplayList();
 			break;
 			case 3:
-			Search();
+			SearchItem();
 			break;
-			
+			case 4:
+			DeleteItem();
 		}
 	}
 	return(0);
