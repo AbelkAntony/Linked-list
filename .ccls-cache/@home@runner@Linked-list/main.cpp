@@ -74,8 +74,14 @@ void SearchItem()
 void DeleteItem()
 {
 	int item;
+	Node *node = Head;
+	Node *temp;
 	cout<<"\nEnter Item to delete";
 	cin>>item;
+	while(item != node->data)
+	{
+		
+	}
 }
 
 int main() 
