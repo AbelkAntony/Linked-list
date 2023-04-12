@@ -52,7 +52,7 @@ void SearchItem()
 	bool isFound = false;
 	cout<<"\nEnter the Item to Search : ";
 	cin>>item;
-	while(isFound == false || node != NULL )
+	while(isFound == false && node != NULL)
 	{
 		if(node->data == item)
 		{
