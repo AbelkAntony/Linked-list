@@ -76,12 +76,26 @@ void DeleteItem()
 	int item;
 	Node *node = Head;
 	Node *temp;
-	cout<<"\nEnter Item to delete";
+	bool isfound = false;
+	cout<<"\nEnter Item to delete : ";
 	cin>>item;
-	while(item != node->data)
+	while(node->next != NULL)
 	{
-		
-	}
+		if(item == node->data)
+		{
+			if(node == Head)
+			{
+				Head = node->next;
+				break;
+			}
+			else
+			{
+				temp = node;
+				break;
+			}
+		}
+		node = node->next;
+	}	
 }
 
 int main() 
