@@ -73,29 +73,41 @@ void SearchItem()
 //Function to Delete item
 void DeleteItem()
 {
-	int item;
 	Node *node = Head;
 	Node *temp;
-	bool isfound = false;
-	cout<<"\nEnter Item to delete : ";
+	int item;
+	cout<<"\nEnter item to delete : ";
 	cin>>item;
-	while(node->next != NULL)
+	while(node != NULL)
 	{
-		if(item == node->data)
+		if(node->data == item)
 		{
 			if(node == Head)
 			{
+				cout<<"\n1";
 				Head = node->next;
+				break;
+			}
+			else if(node->next == NULL)
+			{
+				cout<<"\n2";
+				temp->next = NULL;
 				break;
 			}
 			else
 			{
-				temp = node;
+				cout<<"\n3";
+				temp->next = node->next;
 				break;
 			}
 		}
-		node = node->next;
-	}	
+		else
+		{
+			temp = node;
+			node = node->next;
+		}
+	}
+	
 }
 
 int main() 
